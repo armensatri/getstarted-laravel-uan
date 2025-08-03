@@ -12,7 +12,7 @@ class Redirects
     $user = Auth::user();
 
     if (!$user) {
-      return Redirect::route('home')->send();
+      return Redirect::route('login')->send();
     }
 
     $routes = [

@@ -1,7 +1,12 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+// AUTH
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// FRONTEND
+require __DIR__ . '/frontend/home.php';
+
+// BACKEND
+
+// CONTENT
+
+// CONTENTS

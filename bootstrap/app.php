@@ -12,7 +12,11 @@ return Application::configure(basePath: dirname(__DIR__))
   )
 
   ->withMiddleware(function (Middleware $middleware): void {
-    //
+    $middleware->alias([
+      'submenu.access' => \App\Http\Middleware\SubmenuAccessMiddleware::class,
+      'permission' =>
+      \App\Http\Middleware\PermissionMiddleware::class,
+    ]);
   })
 
   ->withExceptions(function (Exceptions $exceptions): void {
