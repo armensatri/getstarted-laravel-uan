@@ -11,12 +11,11 @@
 
   <div class="grow">
     <div class="inline-flex items-center text-base font-bold
-      text-gray-800 dark:text-neutral-200">
+      text-gray-800 mb-1">
       {{ $menu }}
     </div>
 
-    <div class="text-[15px] font-medium text-gray-600
-      tracking-tight">
+    <div class="text-[15px] font-medium text-gray-700">
       {{ $description }}
     </div>
 

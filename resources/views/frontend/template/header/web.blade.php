@@ -60,7 +60,7 @@
                   :img="asset('/frontend/img/utama/home.png')"
                   alt="home"
                   menu="APP PROJECT"
-                  description="Kunjungi aplikasi project membuat studi kasus nyata"
+                  description="kunjungi aplikasi project belajar membuat studi kasus nyata"
                 />
               </div>
             </div>
