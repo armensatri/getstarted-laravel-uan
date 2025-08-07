@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class WebDefault extends Component
+class MobileDefault extends Component
 {
   public $namaApp;
   public $route;
@@ -30,6 +30,6 @@ class WebDefault extends Component
 
   public function render(): View|Closure|string
   {
-    return view('components.frontend.header.web-default');
+    return view('components.frontend.header.mobile-default');
   }
 }

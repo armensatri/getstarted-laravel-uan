@@ -31,6 +31,7 @@
             <div class="bg-sky-100 rounded-2xl">
               <div class="flex flex-col p-2">
                 <x-web-default
+                  nama-app="Nama app"
                   :route="route('home')"
                   :img="asset('image/default.png')"
                   alt="logo-app-content"
@@ -59,8 +60,8 @@
                   :route="route('home')"
                   :img="asset('/frontend/img/utama/home.png')"
                   alt="home"
-                  menu="APP PROJECT"
-                  description="kunjungi aplikasi project belajar membuat studi kasus nyata"
+                  menu="HOME"
+                  description="Lorem ipsum dolor sit amet consectetur adipisicing elit"
                 />
               </div>
             </div>
