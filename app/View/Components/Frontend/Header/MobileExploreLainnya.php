@@ -8,19 +8,31 @@ use Illuminate\View\Component;
 
 class MobileExploreLainnya extends Component
 {
-    /**
-     * Create a new component instance.
-     */
-    public function __construct()
-    {
-        //
-    }
+  public $route;
+  public $img;
+  public $alt;
+  public $menu;
+  public $description;
+  public $buttonName;
 
-    /**
-     * Get the view / contents that represent the component.
-     */
-    public function render(): View|Closure|string
-    {
-        return view('components.frontend.header.mobile-explore-lainnya');
-    }
+  public function __construct(
+    $route,
+    $img,
+    $alt,
+    $menu,
+    $description,
+    $buttonName,
+  ) {
+    $this->route = $route;
+    $this->img = $img;
+    $this->alt = $alt;
+    $this->menu = $menu;
+    $this->description = $description;
+    $this->buttonName = $buttonName;
+  }
+
+  public function render(): View|Closure|string
+  {
+    return view('components.frontend.header.mobile-explore-lainnya');
+  }
 }

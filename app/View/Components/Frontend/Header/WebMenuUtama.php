@@ -13,6 +13,7 @@ class WebMenuUtama extends Component
   public $alt;
   public $menu;
   public $description;
+  public $buttonName;
 
   public function __construct(
     $route,
@@ -20,12 +21,14 @@ class WebMenuUtama extends Component
     $alt,
     $menu,
     $description,
+    $buttonName,
   ) {
     $this->route = $route;
     $this->img = $img;
     $this->alt = $alt;
     $this->menu = $menu;
     $this->description = $description;
+    $this->buttonName = $buttonName;
   }
 
   public function render(): View|Closure|string

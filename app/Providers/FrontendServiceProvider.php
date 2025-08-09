@@ -6,10 +6,12 @@ use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
 use App\View\Components\Frontend\Header\{
-  MobileDefault,
   WebDefault,
   WebMenuUtama,
   WebExploreLainnya,
+  MobileDefault,
+  MobileMenuUtama,
+  MobileExploreLainnya,
 };
 
 class FrontendServiceProvider extends ServiceProvider
@@ -26,5 +28,7 @@ class FrontendServiceProvider extends ServiceProvider
     Blade::component('web-menu-utama', WebMenuUtama::class);
     Blade::component('web-explore-lainnya', WebExploreLainnya::class);
     Blade::component('mobile-default', MobileDefault::class);
+    Blade::component('mobile-menu-utama', MobileMenuUtama::class);
+    Blade::component('mobile-explore-lainnya', MobileExploreLainnya::class);
   }
 }

@@ -10,11 +10,28 @@ return new class extends Migration
   {
     Schema::create('menus', function (Blueprint $table) {
       $table->id();
+      $table->string('sm');
+      $table->string('name')->unique();
+      $table->string('slug')->unique();
+      $table->text('description')->nullable();
+      $table->string('url', 7)->unique();
       $table->timestamps();
     });
 
     Schema::create('submenus', function (Blueprint $table) {
       $table->id();
+      $table->foreignId('menu_id')
+        ->constrained('menus')
+        ->cascadeOnDelete()
+        ->cascadeOnUpdate();
+      $table->string('ssm');
+      $table->string('name')->unique();
+      $table->string('slug')->unique();
+      $table->string('route')->nullable();
+      $table->string('active')->nullable();
+      $table->string('routename')->nullable();
+      $table->text('description')->nullable();
+      $table->string('url', 7)->unique();
       $table->timestamps();
     });
   }

@@ -23,11 +23,20 @@
     </div>
 
     <div class="inline-flex items-center px-2 py-1 mt-2
-      text-xs font-medium border border-gray-500 hover:border-gray-600 rounded-[9px] leading-1 bg-blue-200 hover:bg-blue-700 hover:text-white text-black hover:drop-shadow-md tracking-wider">
-
-      <a href="{{ $route }}">
-        Link app
-        <i class="ml-1 bi bi-box-arrow-up-right text-xs"></i>
+      text-xs font-medium border border-gray-500 hover:border-gray-600 rounded-[9px] leading-1 drop-shadow-sm tracking-wider
+      {{ $route
+          ? 'bg-blue-200 text-black hover:bg-blue-700
+          hover:text-white hover:drop-shadow-lg'
+          : 'bg-red-200 text-black hover:bg-red-700
+          hover:text-white pointer-events-none'
+      }}">
+      <a href="{{ $route ?? '' }}">
+        {{ $buttonName }}
+        @if ($route)
+          <i class="ml-1 bi bi-box-arrow-up-right text-xs"></i>
+        @else
+          <i class="ml-1 text-xs bi bi-x-circle"></i>
+        @endif
       </a>
     </div>
   </div>

@@ -27,12 +27,11 @@
         <div class="bg-white md:mx-6 lg:mx-8 md:rounded-3xl">
           <div class="gap-4 py-1 md:p-4 md:grid md:grid-cols-2 lg:grid-cols-3">
 
-            <!-- DEFAULT -->
             <div class="bg-sky-100 rounded-2xl">
               <div class="flex flex-col p-2">
                 <x-web-default
                   nama-app="Nama app"
-                  :route="route('home')"
+                  route="/"
                   :img="asset('image/default.png')"
                   alt="logo-app-content"
                   description="Lorem ipsum dolor sit amet consectetur adipisicing elit"
@@ -40,28 +39,28 @@
               </div>
             </div>
 
-            <!-- MENU UTAMA -->
             <div class="bg-sky-100 rounded-l-2xl">
               <div class="flex flex-col p-2 h-[334px] overflow-y-scroll">
                 <x-web-menu-utama
-                  :route="route('home')"
+                  route=""
                   :img="asset('/frontend/img/utama/home.png')"
                   alt="home"
-                  menu="HOME"
+                  menu="X-X"
                   description="Lorem ipsum dolor sit amet consectetur adipisicing elit"
+                  button-name="x-x"
                 />
               </div>
             </div>
 
-            <!-- EPLORE LAINNYA -->
             <div class="bg-sky-100 rounded-l-2xl">
               <div class="flex flex-col p-2 h-[334px] overflow-y-scroll">
                 <x-web-explore-lainnya
-                  :route="route('home')"
+                  route=""
                   :img="asset('/frontend/img/utama/home.png')"
                   alt="home"
-                  menu="HOME"
+                  menu="X-X"
                   description="Lorem ipsum dolor sit amet consectetur adipisicing elit"
+                  button-name="x-x"
                 />
               </div>
             </div>

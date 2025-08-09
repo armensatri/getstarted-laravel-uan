@@ -2,47 +2,57 @@
 
 namespace App\Models\Manageuser;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-  /** @use HasFactory<\Database\Factories\UserFactory> */
-  use HasFactory, Notifiable;
+  use HasFactory;
 
-  /**
-   * The attributes that are mass assignable.
-   *
-   * @var list<string>
-   */
+  protected $table = 'users';
+
   protected $fillable = [
     'name',
+    'username',
     'email',
     'password',
+    'image',
+    'role_id',
+    'status_on_of',
+    'last_seen',
+    'url'
   ];
 
-  /**
-   * The attributes that should be hidden for serialization.
-   *
-   * @var list<string>
-   */
   protected $hidden = [
-    'password',
-    'remember_token',
+    'password'
   ];
 
-  /**
-   * Get the attributes that should be cast.
-   *
-   * @return array<string, string>
-   */
-  protected function casts(): array
+  protected function casts()
   {
     return [
-      'email_verified_at' => 'datetime',
-      'password' => 'hashed',
+      'password' => 'hashed'
+    ];
+  }
+
+  public function getRouteKeyName()
+  {
+    return 'url';
+  }
+
+  public function role()
+  {
+    return $this->belongsTo(Role::class);
+  }
+
+  public function statusOnOf()
+  {
+    $online = $this->statusOnOf;
+    $color = $online ? 'green' : 'red';
+
+    return [
+      'bg' => "bg-{$color}-200",
+      'text' => "text-{$color}-800",
+      'statusOnOf' => $online ? 'online' : 'offline',
     ];
   }
 }
