@@ -2,12 +2,13 @@
 
 namespace App\Models\Manageuser;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Traits\Searchable;
+use App\Traits\HasRandomUrl;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-  use HasFactory;
+  use HasRandomUrl, Searchable;
 
   protected $table = 'users';
 
@@ -21,6 +22,14 @@ class User extends Authenticatable
     'status_on_of',
     'last_seen',
     'url'
+  ];
+
+  protected array $sField = [
+    'name'
+  ];
+
+  protected array $sRelation = [
+    'role' => 'name',
   ];
 
   protected $hidden = [
@@ -46,7 +55,7 @@ class User extends Authenticatable
 
   public function statusOnOf()
   {
-    $online = $this->statusOnOf;
+    $online = $this->status_on_of;
     $color = $online ? 'green' : 'red';
 
     return [

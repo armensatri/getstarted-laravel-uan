@@ -3,11 +3,13 @@
 namespace App\Models\xcatatan;
 
 use App\Traits\Searchable;
+use App\Traits\HasRandomUrl;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class SearchableDiModel extends Model
 {
-  use Searchable;
+  use HasFactory, Searchable, HasRandomUrl;
 
   protected array $sFields = [
     // field utama model
