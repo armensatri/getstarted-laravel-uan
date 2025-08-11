@@ -2,13 +2,14 @@
 
 namespace App\Models\Manageuser;
 
-use App\Traits\Searchable;
-use App\Traits\HasRandomUrl;
+use App\Models\Manageuser\Role;
+use App\Traits\Models\HasRandomUrl;
+use App\Traits\Models\HasSearchable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-  use HasRandomUrl, Searchable;
+  use HasRandomUrl, HasSearchable;
 
   protected $table = 'users';
 

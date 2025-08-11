@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Traits;
+namespace App\Traits\Models;
 
 use App\Helpers\Searching;
 use Illuminate\Database\Eloquent\Builder;
 
-trait Searchable
+trait HasSearchable
 {
   public function scopeSearch(Builder $query, array $filters): void
   {
@@ -15,8 +15,8 @@ trait Searchable
       );
     }
 
-    $fields = $this->sFields;
-    $relations = $this->sRelations ?? [];
+    $fields = $this->sField;
+    $relations = $this->sRelation ?? [];
 
     $query->when(
       $filters['search'] ?? false,

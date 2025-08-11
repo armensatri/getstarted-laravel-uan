@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Traits;
+namespace App\Traits\Models;
 
 use App\Helpers\RandomUrl;
 use Illuminate\Database\Eloquent\Model;
