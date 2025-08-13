@@ -6,9 +6,7 @@ class RandomUrl
 {
   public static function generateUrl($length = 7)
   {
-    $characters = '
-      abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
-    ';
+    $characters = 'abcdefghijklmnopqrstuvwxyz';
 
     $url = '';
 
@@ -16,6 +14,6 @@ class RandomUrl
       $url .= $characters[random_int(0, strlen($characters) - 1)];
     }
 
-    return 'url-' . strtolower($url);
+    return strtolower($url);
   }
 }
