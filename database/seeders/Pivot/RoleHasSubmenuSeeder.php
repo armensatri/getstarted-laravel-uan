@@ -2,9 +2,9 @@
 
 namespace Database\Seeders\Pivot;
 
-use App\Models\Managemenu\Submenu;
-use App\Models\Manageuser\Role;
 use Illuminate\Database\Seeder;
+use App\Models\Manageuser\Role;
+use App\Models\Managemenu\Submenu;
 
 class RoleHasSubmenuSeeder extends Seeder
 {
@@ -198,5 +198,16 @@ class RoleHasSubmenuSeeder extends Seeder
         // 'statuses',
       ],
     ];
+
+    foreach ($roleHasSubmenus as $roleName => $submenuNames) {
+      if (isset($roles[$roleName])) {
+        $submenuIds = collect($submenuNames)
+          ->filter(fn($name) => isset($submenus[$name]))
+          ->map(fn($name) => $submenus[$name]->id)
+          ->toArray();
+
+        $roles[$roleName]->submenus()->syncWithoutDetaching($submenuIds);
+      }
+    }
   }
 }
