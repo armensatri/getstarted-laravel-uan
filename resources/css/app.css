@@ -17,3 +17,11 @@
   font-family: Inter, sans-serif;
   font-feature-settings: "liga" 1, "calt" 1;
 }
+
+.input-auth {
+  @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-1 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder:text-gray-500 placeholder:tracking-wider placeholder:ps-1 placeholder:font-serif tracking-wide;
+}
+
+.button-auth {
+  @apply block w-2/3 mx-auto text-white bg-blue-600 hover:bg-blue-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-base tracking-wide px-5 py-2 cursor-pointer hover:text-blue-800 hover:border hover:border-gray-400 hover:drop-shadow-md;
+}
