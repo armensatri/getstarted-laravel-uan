@@ -17,18 +17,18 @@ Route::group(
   function () {
     Route::controller(LoginController::class)->group(
       function () {
-        Route::get('/authenticate/login', 'index')
+        Route::get('/auth/login', 'index')
           ->name('login');
-        Route::post('/authenticate/login', 'store')
+        Route::post('/auth/login', 'store')
           ->name('login.store');
       }
     );
 
     Route::controller(RegisterController::class)->group(
       function () {
-        Route::get('/authenticate/register', 'index')
+        Route::get('/auth/register', 'index')
           ->name('register');
-        Route::post('/authenticate/register', 'store')
+        Route::post('/auth/register', 'store')
           ->name('register.store');
       }
     );
@@ -42,9 +42,7 @@ Route::group(
     ]
   ],
   function () {
-    Route::post('/authenticate/logout', [
-      LogoutController::class,
-      'index'
-    ])->name('logout');
+    Route::post('/auth/logout', [LogoutController::class, 'index'])
+      ->name('logout');
   }
 );

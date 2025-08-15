@@ -10,7 +10,7 @@ class HomeController extends Controller
   public function index()
   {
     return view('frontend.home.index', [
-      'title' => 'Exp | Home'
+      'title' => 'Explore | Home'
     ]);
   }
 }

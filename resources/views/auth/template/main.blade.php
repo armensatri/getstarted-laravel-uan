@@ -18,6 +18,6 @@
 
   <body class="bg-blue-500">
     <!-- CONTENT-AUTH -->
-    @yield('content-authenticate')
+    @yield('content-auth')
   </body>
 </html>
