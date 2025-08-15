@@ -28,7 +28,7 @@ Route::group(
       function () {
         Route::get('/authenticate/register', 'index')
           ->name('register');
-        Route::get('/authenticate/register', 'store')
+        Route::post('/authenticate/register', 'store')
           ->name('register.store');
       }
     );
