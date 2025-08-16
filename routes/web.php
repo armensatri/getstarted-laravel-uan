@@ -7,6 +7,7 @@ require __DIR__ . '/auth/auth.php';
 require __DIR__ . '/frontend/home.php';
 
 // BACKEND
+require __DIR__ . '/backend/blocked.php';
 
 // CONTENT
 
