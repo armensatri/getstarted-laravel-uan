@@ -11,9 +11,12 @@
     <!-- VITE TAILWIND CSS -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <!-- DEFAULT FONT INTER -->
+    <!-- FONT INTER VAR -->
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+    <!-- FONT INSTRUMENTS SANS -->
+    {{-- <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"> --}}
 
     <!-- ICON BOOTSTRAP -->
     <link rel="stylesheet"

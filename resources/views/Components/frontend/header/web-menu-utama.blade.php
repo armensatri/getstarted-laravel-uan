@@ -16,7 +16,7 @@
       {{ $menu }}
     </div>
 
-    <div class="text-[15px] font-medium lg:line-clamp-2 xl:line-clamp-none text-gray-700">
+    <div class="text-[15px] font-medium lg:line-clamp-2 xl:line-clamp-none text-gray-600">
       {{ $description }}
     </div>
 

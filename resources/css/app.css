@@ -13,10 +13,18 @@
 @source "../../node_modules/flowbite";
 @source "../../node_modules/preline/dist/*.js";
 
+/* FONT INTER VAR */
 :root {
   font-family: Inter, sans-serif;
   font-feature-settings: "liga" 1, "calt" 1;
 }
+
+/* FONT INTRUMENTS SANS */
+/* @layer base {
+  body {
+    font-family: "Instrument Sans", sans-serif;
+  }
+} */
 
 .input-auth {
   @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-1 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder:text-gray-500 placeholder:tracking-wider placeholder:ps-1 placeholder:font-serif tracking-wide;

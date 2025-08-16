@@ -18,7 +18,7 @@
     </div>
 
     <div class="text-[15px] lg:line-clamp-2 xl:line-clamp-none
-      font-medium text-gray-700">
+      font-medium text-gray-600">
       {{ $description }}
     </div>
 
