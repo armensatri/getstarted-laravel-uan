@@ -1,8 +1,8 @@
 <a href="{{ route('home') }}"
           class="-m-1.5 p-1.5">
-          <img src="/frontend/img/logo/logo.jpg"
+          <img src="{{ asset('/frontend/img/logo/logo.png') }}"
             alt="logo"
-            class="w-8 h-8 rounded-full"
+            class="w-[34px] h-[34px] rounded-full"
           />
         </a>
 
@@ -117,7 +117,7 @@
                   </a>
                 </div>
 
-                <form action="{{ route('auth.logout') }}"
+                <form action="{{ route('logout') }}"
                   method="POST">
                   @csrf
 

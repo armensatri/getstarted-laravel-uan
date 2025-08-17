@@ -64,11 +64,23 @@ class LoginController extends Controller
         return Redirect::route($route);
       }
 
-      Alert::error('Access blocked', 'anda tidak memiliki akses');
+      Alert::error(
+        'Access blocked',
+        'anda tidak memiliki akses'
+      );
+
       Auth::logout();
+
       return Redirect::route('login');
     }
 
     RateLimiter::hit($key, $delay);
+
+    Alert::error(
+      'error',
+      'Login gagal! email atau password salah'
+    );
+
+    return Redirect::route('login');
   }
 }
