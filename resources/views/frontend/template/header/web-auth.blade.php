@@ -17,27 +17,24 @@
         </picture>
 
         <span class="text-[17px] font-normal tracking-wide
-          text-black truncate sm:block">
+          text-slate-800 truncate sm:block">
           <span>@</span>{{ Auth::user()->username }}
         </span>
 
-          <i class="text-base text-black bi bi-arrow-down-circle"></i>
+        <i class="text-base text-black bi bi-arrow-down-circle"></i>
       </div>
 
-      <div
-        class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-md rounded-lg mt-2 dark:bg-neutral-800 dark:border dark:border-neutral-700 dark:divide-neutral-700 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-hover-event-web-auth">
-        <div class="p-1 space-y-0.5">
-          <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700" href="#">
-            Newsletter
+      <div role="menu"
+        aria-orientation="vertical"
+        aria-labelledby="hs-dropdown-hover-event-web-auth"
+        class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-52 bg-white rounded-3xl mt-2 after:h-4 border border-gray-300 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full">
+        <div class="space-y-0.5 p-3">
+          <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-[10px] text-sm text-gray-800 hover:bg-sky-50 hover:text-black" href="#">
+            Account
           </a>
-          <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700" href="#">
-            Purchases
-          </a>
-          <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700" href="#">
-            Downloads
-          </a>
-          <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700" href="#">
-            Team Account
+
+          <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-[10px] text-sm text-gray-800 hover:bg-sky-50 hover:text-black" href="#">
+            Dashboard
           </a>
         </div>
       </div>
