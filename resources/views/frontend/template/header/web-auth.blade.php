@@ -27,16 +27,50 @@
       <div role="menu"
         aria-orientation="vertical"
         aria-labelledby="hs-dropdown-hover-event-web-auth"
-        class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-52 bg-white rounded-3xl mt-2 after:h-4 border border-gray-300 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full">
+        class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-52 bg-white rounded-[18px] mt-2 after:h-4 border border-gray-300 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full">
         <div class="space-y-0.5 p-3">
-          <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-[10px] text-sm text-gray-800 hover:bg-sky-50 hover:text-black" href="#">
-            Account
+          <a href="#"
+            class="flex items-center gap-x-3.5 py-2 px-3 rounded-[10px] text-sm text-gray-700 hover:bg-sky-50 hover:text-black">
+
+            <img src="/frontend/img/menu/auth/account.png"
+              alt=""
+              class="size-[18px]"
+            />
+
+            <span class="tracking-wide font-medium text-[15px]">
+              Account
+            </span>
           </a>
 
-          <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-[10px] text-sm text-gray-800 hover:bg-sky-50 hover:text-black" href="#">
-            Dashboard
+          <a href="#"
+            class="flex items-center gap-x-3.5 py-2 px-3 rounded-[10px] text-sm text-gray-700 hover:bg-sky-50 hover:text-black">
+
+            <img src="/frontend/img/menu/auth/dashboard.jpg"
+              alt=""
+              class="size-[18px]"
+            />
+
+            <span class="tracking-wide font-medium text-[15px]">
+              Dashboard
+            </span>
           </a>
         </div>
+
+      <div class="space-y-0.5 p-3 flex justify-center">
+        <form action="{{ route('logout') }}"
+          method="POST">
+          @csrf
+
+          <button type="submit"
+            class="px-3 py-1 mb-2 hover:shadow text-red-800 bg-red-200 hover:bg-red-600 shadow hover:text-white rounded-lg flex items-center justify-center font-medium text-[15px] cursor-pointer">
+            <i class="bi bi-arrow-right-circle"></i>
+            <span class="text-[15px] font-medium ml-1 tracking-wide">
+              Logout
+            </span>
+          </button>
+        </form>
+      </div>
+
       </div>
     </div>
   @else
