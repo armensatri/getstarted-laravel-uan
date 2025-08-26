@@ -42,7 +42,7 @@ Route::group(
     ]
   ],
   function () {
-    Route::post('/auth/logout', [LogoutController::class, 'index'])
+    Route::post('/auth/logout', [LogoutController::class, 'logout'])
       ->name('logout');
   }
 );
