@@ -2,23 +2,23 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+
+use App\View\Components\Backend\Sidebar\{
+  Menu,
+};
 
 class BackendServiceProvider extends ServiceProvider
 {
-    /**
-     * Register services.
-     */
-    public function register(): void
-    {
-        //
-    }
+  public function register(): void
+  {
+    //
+  }
 
-    /**
-     * Bootstrap services.
-     */
-    public function boot(): void
-    {
-        //
-    }
+  public function boot(): void
+  {
+    // SIDEBAR
+    Blade::component('menu', Menu::class);
+  }
 }

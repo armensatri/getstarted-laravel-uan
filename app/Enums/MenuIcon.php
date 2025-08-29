@@ -12,6 +12,6 @@ class MenuIcon
 
     $fileName = $icons[strtolower($name)] ?? '';
 
-    return "/backend/img/{$fileName}";
+    return "/backend/img/menu/{$fileName}";
   }
 }
