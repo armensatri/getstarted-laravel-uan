@@ -16,7 +16,7 @@ class LoginController extends Controller
   public function index()
   {
     return view('auth.login.index', [
-      'title' => 'Explore | Login'
+      'title' => 'Login'
     ]);
   }
 

@@ -7,6 +7,7 @@ use Illuminate\Support\ServiceProvider;
 
 use App\View\Components\Backend\Sidebar\{
   Menu,
+  Submenu,
 };
 
 class BackendServiceProvider extends ServiceProvider
@@ -20,5 +21,6 @@ class BackendServiceProvider extends ServiceProvider
   {
     // SIDEBAR
     Blade::component('menu', Menu::class);
+    Blade::component('submenu', Submenu::class);
   }
 }

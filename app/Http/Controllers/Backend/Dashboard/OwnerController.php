@@ -10,7 +10,7 @@ class OwnerController extends Controller
   public function index()
   {
     return view('backend.dashboard.owner', [
-      'title' => 'Dashboard | Owner'
+      'title' => 'Dashboard'
     ]);
   }
 }

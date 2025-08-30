@@ -24,7 +24,7 @@
           />
         </picture>
 
-        <span class="text-[17px] font-normal tracking-wide
+        <span class="text-[17px] font-normal tracking-normal
           text-slate-800 truncate sm:block">
           <span>@</span>{{ Auth::user()->username }}
         </span>

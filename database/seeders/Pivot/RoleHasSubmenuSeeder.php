@@ -72,19 +72,19 @@ class RoleHasSubmenuSeeder extends Seeder
         'personal public',
 
         // MANAGEDATA
-        // 'data',
+        'data',
         'visitor',
-        // 'access',
+        'access',
         'statistic',
 
         // MANAGEUSER
         'users',
-        // 'roles',
+        'roles',
         'permissions',
 
         // MANAGEMENU
         'menus',
-        // 'submenus',
+        'submenus',
 
         // PIBLISHED
         'statuses',
