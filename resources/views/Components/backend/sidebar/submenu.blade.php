@@ -4,9 +4,9 @@
 
   <span class="text-xs text-blue-700">
     @if (Auth::user()?->role?->submenus?->contains('name', $subMenu))
-      <i class="bi bi-check2 text-[12px] text-green-600"></i>
+      <i class="bi bi-check2 text-[10px] text-green-600"></i>
     @else
-      <i class="bi bi-x text-[12px] text-red-600"></i>
+      <i class="bi bi-x text-[11px] text-red-600"></i>
     @endif
   </span>
 

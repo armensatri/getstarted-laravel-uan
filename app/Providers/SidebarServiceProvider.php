@@ -16,7 +16,7 @@ class SidebarServiceProvider extends ServiceProvider
   public function boot(): void
   {
     view()->composer(
-      'backend.dashboard.owner',
+      'backend.template.sidebar',
 
       function ($view) {
         $user = Auth::user();
