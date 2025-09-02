@@ -27,11 +27,11 @@ class Submenu extends Model
     'url'
   ];
 
-  protected $sField = [
+  protected $sFields = [
     'name',
   ];
 
-  protected $sRelation = [
+  protected $sRelations = [
     'menu' => 'name',
   ];
 

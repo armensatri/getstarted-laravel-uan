@@ -23,7 +23,7 @@ class Menu extends Model
     'url'
   ];
 
-  protected $sField = [
+  protected $sFields = [
     'name',
   ];
 

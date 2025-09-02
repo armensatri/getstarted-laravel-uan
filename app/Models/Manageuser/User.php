@@ -25,11 +25,11 @@ class User extends Authenticatable
     'url'
   ];
 
-  protected $sField = [
+  protected $sFields = [
     'name'
   ];
 
-  protected $sRelation = [
+  protected $sRelations = [
     'role' => 'name',
   ];
 

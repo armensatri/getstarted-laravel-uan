@@ -23,7 +23,7 @@ class Status extends Model
     'url'
   ];
 
-  protected $sField = [
+  protected $sFields = [
     'name',
   ];
 

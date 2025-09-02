@@ -21,7 +21,7 @@ class Permission extends Model
     'url'
   ];
 
-  protected $sField = [
+  protected $sFields = [
     'name',
   ];
 

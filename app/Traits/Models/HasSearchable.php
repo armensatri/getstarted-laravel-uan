@@ -15,8 +15,8 @@ trait HasSearchable
       );
     }
 
-    $fields = $this->sField;
-    $relations = $this->sRelation ?? [];
+    $fields = $this->sFields;
+    $relations = $this->sRelations ?? [];
 
     $query->when(
       $filters['search'] ?? false,

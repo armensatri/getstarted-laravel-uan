@@ -23,7 +23,34 @@ class RoleHasPermissionSeeder extends Seeder
     ]);
 
     $roleHasPermissions = [
-      'owner' => [],
+      'owner' => [
+        // USERS
+        'users.index',
+        'users.create',
+        'users.store',
+        'users.show',
+        'users.edit',
+        'users.update',
+        'users.destroy',
+
+        // ROLES
+        'roles.index',
+        'roles.create',
+        'roles.store',
+        'roles.show',
+        'roles.edit',
+        'roles.update',
+        'roles.destroy',
+
+        // PERMISSIONS
+        'permissions.index',
+        'permissions.create',
+        'permissions.store',
+        'permissions.show',
+        'permissions.edit',
+        'permissions.update',
+        'permissions.destroy',
+      ],
 
       'superadmin' => [],
 
@@ -33,16 +60,23 @@ class RoleHasPermissionSeeder extends Seeder
     ];
 
     foreach ($roleHasPermissions as $roleName => $permissions) {
-      if (empty($permissions)) {
+      $role = Role::where('name', $roleName)->first();
+
+      if (!$role) {
         continue;
       }
 
-      $permissionIds = Permission::whereIn(
-        'name',
-        $permissions
-      )->pluck('id');
+      foreach ($permissions as $permissionName) {
+        Permission::firstOrCreate(
+          ['name' => $permissionName],
+          ['guard_name' => 'web']
+        );
+      }
 
-      $roles[$roleName]->permissions()->sync($permissionIds);
+      $permissionIds = Permission::whereIn('name', $permissions)
+        ->pluck('id');
+
+      $role->permissions()->sync($permissionIds);
     }
   }
 }
