@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Carbon\Carbon;
 use Illuminate\Support\Str;
 use App\Models\Manageuser\User;
 use App\Http\Controllers\Controller;
@@ -40,7 +41,7 @@ class LoginController extends Controller
     if (Auth::attempt($datastore)) {
       User::where('id', Auth::id())->update([
         'status_on_of' => 1,
-        'last_seen' => now()
+        'last_seen' => Carbon::now('Asia/Jakarta')->format('d-m-Y H:i:s')
       ]);
 
       $request->session()->regenerate();

@@ -14,15 +14,25 @@ class MenuIcon
 
       // ACCOUNT
       'personal' => 'personal.jpg',
-      'personal public' => 'personal-public.png'
+      'personal public' => 'personal-public.png',
 
       // MANAGEDATA
+      'data' => 'data.png',
+      'visitor' => 'visitor.jpg',
+      'access' => 'access.png',
+      'statistic' => 'statistic.jpg',
 
       // MANAGEUSER
+      'users' => 'users.jpg',
+      'roles' => 'roles.jpg',
+      'permissions' => 'permissions.jpg',
 
       // MANAGEMENU
+      'menus' => 'menus.jpg',
+      'submenus' => 'submenus.jpg',
 
       // PUBLISHED
+      'statuses' => 'statuses.jpg',
     ];
 
     $fileName = $icons[strtolower($name)] ?? '';
