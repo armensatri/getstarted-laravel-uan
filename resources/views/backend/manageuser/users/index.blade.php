@@ -21,39 +21,31 @@
         <div class="max-w-[85rem] mx-auto">
           <div class="flex flex-col">
             <div class="-m-1.5 overflow-x-auto min-w-full">
-              <div class="p-1.5 inline-block xl:max-w-full align-middle leading-none">
-                {{-- @include('backend.sbreadcrumb.users.index') --}}
+              <div class="p-1.5 inline-block xl:max-w-full">
+                @include('backend.sbreadcrumb.users.index')
 
-                <div class="overflow-hidden bg-white border border-gray-200 shadow-xs rounded-3xl">
-                  <div class="grid gap-3 px-6 py-4 border-b border-gray-200 md:flex md:justify-between md:items-center">
+                <div class="overflow-hidden table-border">
+                  <div class="grid table-grid">
                     <div class="description">
-                      <h2 class="text-lg font-bold tracking-wide text-gray-800 uppercase">
-                        Users
-                      </h2>
-
-                      <p class="text-sm tracking-wide text-gray-600">
-                        halaman {{ $users->currentPage() }}<span class="mx-[1px]">/</span>{{ $users->lastPage() }}...
-                        <span class="ml-1">{{ $users->count() }}</span> data, total semua {{ $users->total() }} data
-                      </p>
+                      <x-description
+                        table-name="Users"
+                        :page-data="$users"
+                      />
                     </div>
 
                     <div class="table-header">
                       <div class="inline-flex items-center gap-x-2">
                         <div class="refresh">
-                          <a href="{{ route('users.index') }}">
-                            <button class="inline-flex items-center px-3
-                              py-1.5 text-sm
-                              font-semibold text-white bg-blue-600 border border-transparent rounded-xl gap-x-2 hover:bg-blue-700 cursor-pointer">
-                              <i class="bi bi-bootstrap-reboot"></i>
-                            </button>
-                          </a>
+                          <x-refresh
+                            :route="route('users.index')"
+                          />
                         </div>
 
                         <div class="search">
                           <form action="/users">
                             <button type="button"
                               data-hs-overlay="#hs-slide-down-animation-modal"
-                              class="inline-flex items-center px-3 py-1.5 text-sm font-semibold text-white bg-blue-600 border border-transparent rounded-xl gap-x-2 hover:bg-blue-700">
+                              class="inline-flex items-center px-3 py-1.5 text-sm font-semibold text-white bg-blue-600 border border-transparent rounded-xl gap-x-2 hover:bg-blue-700 cursor-pointer">
                               <i class="bi bi-search"></i>
                             </button>
 
@@ -88,7 +80,7 @@
                                         stroke-width="2"
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
-                                        class="flex-shrink-0 size-4">
+                                        class="flex-shrink-0 size-4 cursor-pointer">
                                         <path d="M18 6 6 18"></path>
                                         <path d="m6 6 12 12"></path>
                                       </svg>
@@ -116,7 +108,7 @@
 
                                   <div class="flex items-center justify-end px-4 py-3 gap-x-2">
                                     <button type="submit"
-                                      class="inline-flex items-center px-3.5 py-1 text-base font-semibold text-white bg-blue-600 border tracking-wide border-transparent rounded-xl gap-x-2 hover:bg-blue-700 disabled:opacity-50">
+                                      class="inline-flex items-center px-3.5 py-1 text-base font-semibold text-white bg-blue-600 border tracking-wide border-transparent rounded-xl gap-x-2 hover:bg-blue-700 disabled:opacity-50 cursor-pointer">
                                       Search
                                     </button>
                                   </div>
@@ -129,7 +121,7 @@
                         <div class="backup">
                           <button type="button"
                             data-hs-overlay="#hs-vertically-centered-modal"
-                            class="inline-flex items-center px-3 py-1.5 text-sm font-semibold text-white bg-blue-600 border border-transparent rounded-xl gap-x-2 hover:bg-blue-700 disabled:opacity-50">
+                            class="inline-flex items-center px-3 py-1.5 text-sm font-semibold text-white bg-blue-600 border border-transparent rounded-xl gap-x-2 hover:bg-blue-700 disabled:opacity-50 cursor-pointer">
                             <i class="bi bi-download"></i>
                           </button>
 
@@ -156,8 +148,7 @@
 
                                     <span class="sr-only">Close</span>
 
-                                    <svg class="flex-shrink-0 size-4"
-                                      xmlns="http://www.w3.org/2000/svg"
+                                    <svg xmlns="http://www.w3.org/2000/svg"
                                       width="25"
                                       height="25"
                                       viewBox="0 0 24 24"
@@ -165,7 +156,8 @@
                                       stroke="currentColor"
                                       stroke-width="2"
                                       stroke-linecap="round"
-                                      stroke-linejoin="round">
+                                      stroke-linejoin="round"
+                                      class="flex-shrink-0 size-4 cursor-pointer">
                                       <path d="M18 6 6 18"></path>
                                       <path d="m6 6 12 12"></path>
                                     </svg>
@@ -450,7 +442,7 @@
 
                                         <button type="submit"
                                           onclick="return confirm('yakin menghapus data ini ?')"
-                                          class="inline-flex items-center justify-center px-3 py-1.5 bg-red-600 hover:bg-red-700 rounded-xl">
+                                          class="inline-flex items-center justify-center px-3 py-1.5 bg-red-600 hover:bg-red-700 rounded-xl cursor-pointer">
                                           <i class="text-base text-white bi bi-trash3"></i>
                                         </button>
                                       </form>
