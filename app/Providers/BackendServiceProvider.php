@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use App\View\Components\Backend\Pagination\Pagination;
 
 use App\View\Components\Backend\Sidebar\{
   Menu,
@@ -22,5 +23,8 @@ class BackendServiceProvider extends ServiceProvider
     // SIDEBAR
     Blade::component('menu', Menu::class);
     Blade::component('submenu', Submenu::class);
+
+    // PAGINATION
+    Blade::component('pagination', Pagination::class);
   }
 }

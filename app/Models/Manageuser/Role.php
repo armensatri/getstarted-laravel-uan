@@ -3,6 +3,7 @@
 namespace App\Models\Manageuser;
 
 use App\Models\Managemenu\Menu;
+use App\Models\Manageuser\User;
 use App\Models\Managemenu\Submenu;
 use App\Traits\Models\HasRandomUrl;
 use App\Traits\Models\HasSluggable;
@@ -34,6 +35,11 @@ class Role extends Model
   public function getRouteKeyName()
   {
     return 'url';
+  }
+
+  public function users()
+  {
+    return $this->hasMany(User::class);
   }
 
   public function menus()
