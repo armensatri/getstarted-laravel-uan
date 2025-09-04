@@ -17,6 +17,11 @@ return Application::configure(basePath: dirname(__DIR__))
       'permission' =>
       \App\Http\Middleware\PermissionMiddleware::class,
     ]);
+
+    // SECURITY HEADER
+    // $middleware->append(
+    //   \App\Http\Middleware\SecurityHeadersMiddleware::class
+    // );
   })
 
   ->withExceptions(function (Exceptions $exceptions): void {

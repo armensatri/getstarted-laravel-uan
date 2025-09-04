@@ -20,6 +20,21 @@ use App\View\Components\Backend\Breadcrumb\{
 use App\View\Components\Backend\TableHeader\{
   Description,
   Refresh,
+  Search,
+};
+
+use App\View\Components\Backend\Button\{
+  ButtonCreate,
+};
+
+use App\View\Components\Backend\Table\{
+  Th,
+  ThAction,
+  TdVar,
+  TdVarCenter,
+  TdImageHover,
+  TdVarBg,
+  TdAction,
 };
 
 class BackendServiceProvider extends ServiceProvider
@@ -46,5 +61,18 @@ class BackendServiceProvider extends ServiceProvider
     // TABLE HEADER
     Blade::component('description', Description::class);
     Blade::component('refresh', Refresh::class);
+    Blade::component('search', Search::class);
+
+    // BUTTON
+    Blade::component('button-create', ButtonCreate::class);
+
+    // TABLE
+    Blade::component('th', Th::class);
+    Blade::component('th-action', ThAction::class);
+    Blade::component('td-var', TdVar::class);
+    Blade::component('td-var-center', TdVarCenter::class);
+    Blade::component('td-image-hover', TdImageHover::class);
+    Blade::component('td-var-bg', TdVarBg::class);
+    Blade::component('td-action', TdAction::class);
   }
 }
