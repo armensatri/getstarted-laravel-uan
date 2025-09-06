@@ -11,7 +11,7 @@
         </div>
       </section>
 
-      <section class="w-full px-4 mt-8 mb-5">
+      <section class="w-full px-3 mt-8 mb-5">
         {{-- content backend --}}
       </section>
     </div>

@@ -8,7 +8,7 @@
 <li class="inline-flex items-center">
   <div {{
     $attributes->merge([
-      'class' => 'flex items-center text-sm tracking-wide' .
+      'class' => 'flex items-center text-sm italic tracking-wide' .
         ($textcolor ? '' : ' text-gray-600')
       ])
     }}>

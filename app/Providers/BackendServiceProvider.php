@@ -37,6 +37,11 @@ use App\View\Components\Backend\Table\{
   TdAction,
 };
 
+use App\View\Components\Backend\Input\{
+  Input,
+  InputSelect,
+};
+
 class BackendServiceProvider extends ServiceProvider
 {
   public function register(): void
@@ -74,5 +79,9 @@ class BackendServiceProvider extends ServiceProvider
     Blade::component('td-image-hover', TdImageHover::class);
     Blade::component('td-var-bg', TdVarBg::class);
     Blade::component('td-action', TdAction::class);
+
+    // INPUT
+    Blade::component('input', Input::class);
+    Blade::component('input-select', InputSelect::class);
   }
 }

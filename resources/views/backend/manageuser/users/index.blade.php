@@ -17,12 +17,14 @@
         @endif
       </div>
 
-      <section class="w-full px-4 mt-8 mb-5">
+      <section class="w-full px-3 mt-8 mb-5">
         <div class="max-w-[85rem] mx-auto">
           <div class="flex flex-col">
             <div class="-m-1.5 overflow-x-auto min-w-full">
               <div class="p-1.5 inline-block xl:max-w-full">
-                @include('backend.sbreadcrumb.users.index')
+                <div class="breadcrumb">
+                  @include('backend.sbreadcrumb.users.index')
+                </div>
 
                 <div class="overflow-hidden table-border">
                   <div class="grid table-grid">

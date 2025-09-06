@@ -7,6 +7,7 @@ use App\Models\Manageuser\User;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Manageuser\User\UserSr;
 use App\Http\Requests\Manageuser\User\UserUr;
+use App\Models\Manageuser\Role;
 
 class UsersController extends Controller
 {
@@ -20,7 +21,7 @@ class UsersController extends Controller
       ->select(['id', 'image', 'name', 'email', 'role_id', 'url'])
       ->with(['role:id,name,bg,text'])
       ->orderby('id', 'asc')
-      ->paginate(1)
+      ->paginate(15)
       ->withQueryString();
 
     return view('backend.manageuser.users.index', [
@@ -32,9 +33,17 @@ class UsersController extends Controller
   /**
    * Show the form for creating a new resource.
    */
-  public function create()
+  public function create(User $user)
   {
-    //
+    $roles = Role::query()->select('id', 'name')
+      ->orderBy('sr', 'asc')
+      ->get();
+
+    return view('backend.manageuser.users.create', [
+      'title' => 'Create data user',
+      'user' => $user,
+      'roles' => $roles
+    ]);
   }
 
   /**
